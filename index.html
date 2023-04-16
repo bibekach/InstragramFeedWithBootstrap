@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram feed with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <h5><i class="fa-brands fa-instagram"></i> Instagram</h5>
+                </div>
+                <div class="d-flex align-right justify-content-end">
+
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Caption:</h6>
+                    <textarea class="form-control" placeholder="Add the caption of your post here"></textarea>
+                    <div class="row">
+                        <button class="col-1 border rounded btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab"><i class="fa-solid fa-table-cells"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab"><i class="fa-solid fa-square"></i></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel">
+                <div class="row">
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/301"></div>
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/302"></div>
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/303"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/304"></div>
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/305"></div>
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/306"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/307"></div>
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/308"></div>
+                    <div class="col-4"><img style="height: 30rem;" class="w-100 p-2"
+                            src="https://picsum.photos/200/309"></div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade overflow-hidden" id="profile">
+                <div class="row my-4">
+                    <div class="col-6 mx-auto">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Post heading</div>
+                            <small>01/16</small>
+                        </div>
+                        <img style="height: 40rem;" class="w-100" src="https://picsum.photos/200/300" />
+                        <div class="p-2">
+                            <strong>11 Likes</strong>
+                            <p>This is an post caption.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Post heading</div>
+                            <small>03/16</small>
+                        </div>
+                        <img style="height: 40rem;" class="w-100" src="https://picsum.photos/200/301" />
+                        <div class="p-2">
+                            <strong>222 Likes</strong>
+                            <p>This is an post caption.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Post heading</div>
+                            <small>02/16</small>
+                        </div>
+                        <img style="height: 40rem;" class="w-100" src="https://picsum.photos/200/302" />
+                        <div class="p-2">
+                            <strong>3333 Likes</strong>
+                            <p>This is an post caption.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
